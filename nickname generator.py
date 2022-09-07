@@ -4,6 +4,8 @@ import pip
 import random
 import numpy as np
 
+nickname_list=["Crusher", "Che", "Dimes", "Captain", "Prez"]
+
 loop = True
 while loop:
     print("")
@@ -20,4 +22,7 @@ while loop:
         print("CHANGE NAME")
         first_name=input("Please enter first name: ")
         last_name=input("Please enter last name: ")
-        print("Current name is " + first_name , " " + last_name + ".")
+        print("Current name is " + first_name + " " + last_name + ".")
+    elif selection=="2":
+        print("RANDOM NICKNAME")
+        print(first_name + " " + "'" + random.choice(nickname_list) + "'" + " " + last_name)
