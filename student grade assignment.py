@@ -22,15 +22,17 @@ while loop:
 
     if selection == "1":
         print("ALL GRADES: ")
-        print(*randnums, sep='\n')
+        for element in randnums:
+            print(element,"%")
     elif selection == "2":
         print("HONOURS: ")
-        print(*honours, sep='\n')
+        for elem in honours:
+            print(elem,"%")
     elif selection == "3":
         print("STATS")
-        print("Highest Grade: " , max_value)
-        print("Lowest Grade: " , min_value)
-        print("Average Grade: " , avg_value)
+        print("Highest Grade: " , max_value, "%")
+        print("Lowest Grade: " , min_value, "%")
+        print("Average Grade: " , avg_value, "%")
     elif selection == "4":
         newrandnums = np.random.randint(1, 100, 35)
         print("GRADES HAVE BEEN RANDOMIZED")

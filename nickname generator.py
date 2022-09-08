@@ -1,3 +1,4 @@
+from tkinter import N
 import pip
 
 
@@ -26,3 +27,7 @@ while loop:
     elif selection=="2":
         print("RANDOM NICKNAME")
         print(first_name + " " + "'" + random.choice(nickname_list) + "'" + " " + last_name)
+    if selection=="3":
+        print("ALL NICKNAMES")
+        for elem in nickname_list:
+            print(first_name + " " , elem, " " + last_name)
