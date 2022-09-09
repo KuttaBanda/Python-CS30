@@ -55,3 +55,6 @@ while loop:
             else:
                 print(old_name, " was not found in the nickname list.")
                 break
+    elif selection == "6":
+        print("EXITED")
+        loop = False
