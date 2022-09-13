@@ -51,6 +51,30 @@ while loop:
                 contacts[1,indexof_name]=edited_num
                 edited_email=input("What is the new email?: ")
                 contacts[2, indexof_name]=edited_email
+            else:
+                print("Name doesn't exist in contact list.")
     elif selection=="4":
         print("NEW CONTACT")
-        new_name=input("What is the name of your new contact?: ")
+        new_name=str(input("What is the name of your new contact?: "))
+        names.append(new_name)
+        new_number=str(input("What is the number for your new contact?: "))
+        phone.append(new_number)
+        new_email=str(input("What is the email for your new contact?: "))
+        email.append(new_email)
+        contacts=np.matrix([names, phone, email])
+    elif selection=="5":
+        print("REMOVE CONTACT")
+        remove_name=input("Who do you want to remove from contact list?: ")
+        l3=[remove_name]
+        for i in l3:
+            if i in names:
+                remove_index=names.index(remove_name)
+                names.pop(remove_index)
+                phone.pop(remove_index)
+                email.pop(remove_index)
+                contacts=np.matrix([names, phone, email])
+            else:
+                print("Name doesn't exist in contact list.")
+    elif selection=="6":
+         print("EXITED")
+         loop = False
