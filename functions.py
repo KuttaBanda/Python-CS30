@@ -16,8 +16,9 @@ def indexOf(list, element):
         if list[i]==element:
             print(element, " is in the list at index", i)
             break
-        elif i==len(list):
+        elif i==len(list)-1 and i!=element:
             print(element, " is not in the list")
+            break
 
-indexOf(array, 2)
+indexOf(array, 4)
 
