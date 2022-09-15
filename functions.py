@@ -1,4 +1,5 @@
 array=[1, 2, 3]
+reverselist=[]
 
 def contains(aList, item):
     l1 = [item]
@@ -22,3 +23,18 @@ def indexOf(list, element):
 
 indexOf(array, 4)
 
+def reverse(aList):
+    for item in aList[::-1]:
+        reverselist.append(item)
+    print(reverselist)
+
+reverse(array)
+
+def swap(aList, index1, index2):
+    item1swap=aList[index1]
+    item2swap=aList[index2]
+    aList[index1]=item2swap
+    aList[index2]=item1swap
+    print(aList)
+
+swap(array, 0, 1)
