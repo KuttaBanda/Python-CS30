@@ -1,7 +1,7 @@
 from operator import index
 
 
-array=[1, 2, 3]
+array=[1, 2, 3, 4, 5, 6, 7, 8, 9]
 reverselist=[]
 
 def contains(aList, item):
@@ -40,7 +40,7 @@ def swap(aList, index1, index2):
     aList[index2]=item1swap
     print(aList)
 
-swap(array, 0, 1)
+swap(array, 5, 3)
 
 def indexOfMin(aList):
     minValue=min(aList)
