@@ -1,3 +1,6 @@
+from operator import index
+
+
 array=[1, 2, 3]
 reverselist=[]
 
@@ -38,3 +41,10 @@ def swap(aList, index1, index2):
     print(aList)
 
 swap(array, 0, 1)
+
+def indexOfMin(aList):
+    minValue=min(aList)
+    indexMin=aList.index(minValue)
+    print(indexMin)
+
+indexOfMin(array)
