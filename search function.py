@@ -5,13 +5,12 @@ unsorted = [30, 20, 70, 40, 50, 100, 90]
 def linearSearch(list, element):
     for i in range(len(list)):
         if list[i]==element:
-            print(i)
-            break
-        elif i==len(list)-1 and i!=element:
-            print("-1")
-            break
+            return i
+    return -1
 
-linearSearch(nums, 70)
-linearSearch(words, "at")
-linearSearch(unsorted, 100)
-linearSearch(words, "cow")
+
+print(linearSearch(nums, 70))
+print(linearSearch(words, "at"))
+print(linearSearch(unsorted, 100))
+print(linearSearch(words, "cow"))
+

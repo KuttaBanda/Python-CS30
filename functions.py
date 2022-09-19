@@ -18,20 +18,17 @@ contains(array, 1)
 def indexOf(list, element):
     for i in list:
         if list[i]==element:
-            print(element, " is in the list at index", i)
-            break
-        elif i==len(list)-1 and i!=element:
-            print(element, " is not in the list")
-            break
+            return i
+        return -1
 
-indexOf(array, 4)
+print(indexOf(array, 4))
 
 def reverse(aList):
     for item in aList[::-1]:
         reverselist.append(item)
-    print(reverselist)
+    return reverselist
 
-reverse(array)
+print(reverse(array))
 
 def swap(aList, index1, index2):
     item1swap=aList[index1]
@@ -45,6 +42,6 @@ swap(array, 5, 3)
 def indexOfMin(aList):
     minValue=min(aList)
     indexMin=aList.index(minValue)
-    print(indexMin)
+    return indexMin
 
-indexOfMin(array)
+print(indexOfMin(array))
