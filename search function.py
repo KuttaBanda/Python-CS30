@@ -30,6 +30,9 @@ def binarySearch(list, element):
             high=mid-1
         elif element > list[mid]:
             low=mid+1
-        return -1
+    return -1
 
-print(binarySearch(nums, 100))
+print(binarySearch(nums, 75))
+print(binarySearch(words, "fish"))
+print(binarySearch(words, "at"))
+print(binarySearch(unsorted, 70))
