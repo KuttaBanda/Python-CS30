@@ -12,11 +12,6 @@ def linearSearch(list, element):
     return -1
 
 
-print(linearSearch(nums, 70))
-print(linearSearch(words, "at"))
-print(linearSearch(unsorted, 100))
-print(linearSearch(words, "cow"))
-
 def binarySearch(list, element):
     low=0
     high=len(list)-1
@@ -32,8 +27,4 @@ def binarySearch(list, element):
             low=mid+1
     return -1
 
-print(binarySearch(nums, 75))
-print(binarySearch(words, "fish"))
-print(binarySearch(words, "at"))
-print(binarySearch(unsorted, 70))
 
