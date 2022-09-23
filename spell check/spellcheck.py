@@ -5,15 +5,18 @@
 
 import re 
 
-from search.searchfunction import linearSearch, binarySearch   
-
+def linearSearch(list, element):
+    for i in range(len(list)):
+        if list[i]==element:
+            return i
+    return -1
 
 def main():
     # Load data files into lists
     global dictionary
-    dictionary = loadWordsFromFile("data-files/dictionary.txt")
+    dictionary = loadWordsFromFile("spell check/data-files/dictionary.txt")
     global aliceWords
-    aliceWords = loadWordsFromFile("data-files/AliceInWonderLand.txt")
+    aliceWords = loadWordsFromFile("spell check/data-files/AliceInWonderLand.txt")
 
     # Print first 50 values of each list to verify contents
     print(dictionary[0:50])
@@ -41,7 +44,7 @@ while loop:
   print("Main Menu")
   print("1: Spell Check a Word (Linear Search")
   print("2: Spell Check a Word (Binary Search)")
-  print("3: Spell CHeck Alice in Wonderland (Linear Search)")
+  print("3: Spell Check Alice in Wonderland (Linear Search)")
   print("4: Spell Check Alice in Wonderland (Lineae Search)")
   print("5: Exit")
   selection = input("What Option? (1-5): ")
@@ -50,7 +53,7 @@ while loop:
     linearword=input("Please enter a word: ")
     linearSearch(dictionary, linearword)
     if linearSearch(dictionary, linearword) != -1:
-      print(linearword, "is in the dictionary at position, ", linearSearch(dictionary, linearword),".")
+      print(linearword, "is in the dictionary at position ", linearSearch(dictionary, linearword),".")
     else:
       print(linearword, "is not in the dictionary.")
     
