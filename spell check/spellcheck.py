@@ -82,4 +82,3 @@ while loop:
       print(binaryword, "is in the dictionary at position ", binarySearch(dictionary, binaryword),".")
     else:
       print(binaryword, "is not in the dictionary.")
-
