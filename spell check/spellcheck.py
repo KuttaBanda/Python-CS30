@@ -5,12 +5,29 @@
 
 import re
 from time import time 
+from math import floor
 
 def linearSearch(list, element):
     for i in range(len(list)):
         if list[i]==element:
             return i
     return -1
+def binarySearch(list, element):
+    low=0
+    high=len(list)-1
+    mid=0
+
+    while low <= high:
+        mid = floor((low+high)/2)
+        if element == list[mid]:
+            return mid
+        elif element < list[mid]:
+            high=mid-1
+        elif element > list[mid]:
+            low=mid+1
+    return -1
+
+
 
 def main():
     # Load data files into lists
@@ -58,4 +75,11 @@ while loop:
       print(linearword, "is in the dictionary at position ", linearSearch(dictionary, linearword),".")
     else:
       print(linearword, "is not in the dictionary.")
-    
+  elif selection=="2":
+    binaryword=input("Please enter a word: ")
+    binarySearch(dictionary, binaryword)
+    if binarySearch(dictionary, binaryword) != -1:
+      print(binaryword, "is in the dictionary at position ", binarySearch(dictionary, binaryword),".")
+    else:
+      print(binaryword, "is not in the dictionary.")
+
