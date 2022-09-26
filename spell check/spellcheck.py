@@ -3,7 +3,8 @@
 # 1: dictionary: a list containing all of the words from "dictionary.txt"
 # 2: aliceWords: a list containing all of the words from "AliceInWonderland.txt"
 
-import re 
+import re
+from time import time 
 
 def linearSearch(list, element):
     for i in range(len(list)):
@@ -42,16 +43,17 @@ while loop:
   # Print Main Menu
   print("")
   print("Main Menu")
-  print("1: Spell Check a Word (Linear Search")
+  print("1: Spell Check a Word (Linear Search)")
   print("2: Spell Check a Word (Binary Search)")
   print("3: Spell Check Alice in Wonderland (Linear Search)")
-  print("4: Spell Check Alice in Wonderland (Lineae Search)")
+  print("4: Spell Check Alice in Wonderland (Binary Search)")
   print("5: Exit")
   selection = input("What Option? (1-5): ")
 
   if selection=="1":
     linearword=input("Please enter a word: ")
     linearSearch(dictionary, linearword)
+    print("Linear search is starting...")
     if linearSearch(dictionary, linearword) != -1:
       print(linearword, "is in the dictionary at position ", linearSearch(dictionary, linearword),".")
     else:
