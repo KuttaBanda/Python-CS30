@@ -35,6 +35,8 @@ def main():
     dictionary = loadWordsFromFile("spell check/data-files/dictionary.txt")
     global aliceWords
     aliceWords = loadWordsFromFile("spell check/data-files/AliceInWonderLand.txt")
+    for i in range(len(aliceWords)):
+      aliceWords[i]=aliceWords[i].lower()
 
     # Print first 50 values of each list to verify contents
     print(dictionary[0:50])
@@ -78,7 +80,15 @@ while loop:
   elif selection=="2":
     binaryword=input("Please enter a word: ")
     binarySearch(dictionary, binaryword)
+    print("Binary search is starting...")
     if binarySearch(dictionary, binaryword) != -1:
       print(binaryword, "is in the dictionary at position ", binarySearch(dictionary, binaryword),".")
     else:
-      print(binaryword, "is not in the dictionary.")
+      print(binaryword, "is not in the dictionary.")  
+  elif selection=="3":
+    linCount=0
+    for i in aliceWords:
+      linearSearch(dictionary, aliceWords[i])
+      if linearSearch(dictionary, aliceWords[i]) == -1:
+        linCount += 1
+      print(linCount)
