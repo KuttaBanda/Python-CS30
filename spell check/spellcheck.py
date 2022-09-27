@@ -87,8 +87,9 @@ while loop:
       print(binaryword, "is not in the dictionary.")  
   elif selection=="3":
     linCount=0
-    for i in aliceWords:
+    for i in range(len(dictionary)):
       linearSearch(dictionary, aliceWords[i])
       if linearSearch(dictionary, aliceWords[i]) == -1:
         linCount += 1
-      print(linCount)
+    
+    print(linCount)
