@@ -3,7 +3,6 @@ import pip
 
 
 import random
-import numpy as np
 
 nickname_list=["Crusher", "Che", "Dimes", "Captain", "Prez"]
 
