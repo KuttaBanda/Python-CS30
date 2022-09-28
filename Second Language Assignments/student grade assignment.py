@@ -1,13 +1,14 @@
 import pip
-
-
 import random
-import numpy as np
-randnums = np.random.randint(1, 100, 35)
-honours = randnums[randnums > 80]
-max_value = np.max(randnums)
-min_value = np.min(randnums)
-avg_value = round(np.average(randnums))
+
+randnums=[]
+for i in range(35):
+    randnum=random.randint(0,100)
+    randnums.append(randnum)
+
+max_value = max(randnums)
+min_value = min(randnums)
+avg_value = round(sum(randnums)/len(randnums))
 
 loop = True
 while loop:
@@ -26,16 +27,18 @@ while loop:
             print(element,"%")
     elif selection == "2":
         print("HONOURS: ")
-        for elem in honours:
-            print(elem,"%")
+        for elem in randnums:
+            if elem >= 80:
+             print(elem,"%")
     elif selection == "3":
         print("STATS")
         print("Highest Grade: " , max_value, "%")
         print("Lowest Grade: " , min_value, "%")
         print("Average Grade: " , avg_value, "%")
     elif selection == "4":
-        newrandnums = np.random.randint(1, 100, 35)
-        print("GRADES HAVE BEEN RANDOMIZED")
+        newrandnums = []
+        for i in range(35):
+                       
     elif selection == "5":
         print("EXITED")
         loop = False
