@@ -37,11 +37,17 @@ def swap(aList, index1, index2):
     aList[index2]=item1swap
     print(aList)
 
-swap(array, 5, 3)
+swap(array, 0, 3)
 
 def indexOfMin(aList):
-    minValue=min(aList)
-    indexMin=aList.index(minValue)
-    return indexMin
+    current=aList[0]
+    indexmin=0
+    for i in range(len(aList)-1):
+        if aList[i]<current:
+            indexmin=i
+            current=aList[i]
+        elif aList[i]>current:
+            indexmin=aList.index(current)
+    print(indexmin)
 
 print(indexOfMin(array))
