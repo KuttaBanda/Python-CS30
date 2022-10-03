@@ -6,10 +6,14 @@ import random
 
 nickname_list=["Crusher", "Che", "Dimes", "Captain", "Prez"]
 
+print("Set Your Name: ")
+first_name=input("Please enter first name: ")
+last_name=input("Please enter last name: ")
+
 loop = True
 while loop:
     print("")
-    print("Main Menu")
+    print("Main Menu", "(", first_name, last_name, ")")
     print("1. Change Name")
     print("2. Display a Random Nickname")
     print("3. Display All Nicknames")
@@ -33,27 +37,20 @@ while loop:
     elif selection=="4":
         print("ADD A NICKNAME")
         new_name=input("Please enter a nickname to add: ")
-        l1=[new_name]
-        for i in l1:
-            if i not in nickname_list:
+        
+        if new_name not in nickname_list:
                 nickname_list.append(new_name)
                 print(new_name, " has been added to the nickname list.")
-                break
-            else:
+        else:
                 print(new_name, " is already in the nickname list.")
-                break
     elif selection=="5":
         print("REMOVE A NICKNAME")
         old_name=input("Please enter a nickname to remove: ")
-        l2=[old_name]
-        for i in l2:
-            if i in nickname_list:
+        if old_name in nickname_list:
                 nickname_list.remove(old_name)
-                print(old_name, " has been removed from the nickname list.")
-                break
-            else:
+                print(old_name, " has been removed from the nickname list.")               
+        else:
                 print(old_name, " was not found in the nickname list.")
-                break
     elif selection == "6":
         print("EXITED")
         loop = False
