@@ -54,12 +54,11 @@ while loop:
     elif selection=="4":
         print("NEW CONTACT")
         new_name=str(input("What is the name of your new contact?: "))
-        names.append(new_name)
+        contacts[0].append(new_name)
         new_number=str(input("What is the number for your new contact?: "))
-        phone.append(new_number)
+        contacts[1].append(new_number)
         new_email=str(input("What is the email for your new contact?: "))
-        email.append(new_email)
-        contacts=([names, phone, email])
+        contacts[2].append(new_email)
     elif selection=="5":
         print("REMOVE CONTACT")
         remove_name=input("Who do you want to remove from contact list?: ")
