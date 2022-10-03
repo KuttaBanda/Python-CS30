@@ -5,11 +5,9 @@ array=[1, 2, 3, 4, 5, 6, 7, 8, 9]
 reverselist=[]
 
 def contains(aList, item):
-    l1 = [item]
-    for i in l1:
-        if i in aList:
+    if i in aList:
             print(item, " is in the list")
-        else:
+    else:
             print(item, " is not in the list")
 
 
