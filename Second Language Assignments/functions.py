@@ -9,7 +9,8 @@ def contains(aList, item):
             print(item, " is in the list")
     else:
             print(item, " is not in the list")
-contains(array, 1)
+
+
 
 def indexOf(list, element):
     for i in list:
