@@ -80,10 +80,11 @@ while loop:
       print(linearword, "is not in the dictionary.")
   elif selection=="2":
     binaryword=input("Please enter a word: ")
+    start_bin1=time.time()
     binarySearch(dictionary, binaryword)
     print("Binary search is starting...")
     if binarySearch(dictionary, binaryword) != -1:
-      print(binaryword, "is in the dictionary at position ", binarySearch(dictionary, binaryword),".")
+      print(binaryword, "is in the dictionary at position ", binarySearch(dictionary, binaryword),".", "(", time.time()-start_bin1, "seconds", ")")
     else:
       print(binaryword, "is not in the dictionary.")  
   elif selection=="3":
