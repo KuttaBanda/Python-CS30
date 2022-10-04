@@ -1,29 +1,29 @@
+from cgi import test
 from operator import index
 
 
-array=[1, 2, 3, 4, 5, 6, 7, 8, 9]
+test=[1, 2, 3, 4, 5, 6, 7, 8, 9]
 reverselist=[]
 
 def contains(aList, item):
-    if item in aList:
-            print(item, " is in the list")
-    else:
-            print(item, " is not in the list")
-
+    for elem in aList:
+        if elem==item:
+            return True
+    return False
 
 
 def indexOf(list, element):
-    for i in list:
+    for i in range(len(list)):
         if list[i]==element:
             return i
-        return -1
-print(indexOf(array, 4))
+    return -1
+print(indexOf(test, 4))
 
 def reverse(aList):
     for item in aList[::-1]:
         reverselist.append(item)
     return reverselist
-print(reverse(array))
+print(reverse(test))
 
 def swap(aList, index1, index2):
     item1swap=aList[index1]
@@ -31,16 +31,14 @@ def swap(aList, index1, index2):
     aList[index1]=item2swap
     aList[index2]=item1swap
     print(aList)
-swap(array, 0, 3)
+swap(test, 0, 3)
 
 def indexOfMin(aList):
     current=aList[0]
     indexmin=0
-    for i in range(len(aList)-1):
+    for i in range(len(aList)):
         if aList[i]<current:
             indexmin=i
             current=aList[i]
-        elif aList[i]>current:
-            indexmin=aList.index(current)
-    print(indexmin)
-print(indexOfMin(array))
+    return indexmin
+print(indexOfMin(test))
