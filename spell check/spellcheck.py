@@ -4,7 +4,7 @@
 # 2: aliceWords: a list containing all of the words from "AliceInWonderland.txt"
 
 import re
-from time import time 
+import time
 from math import floor
 
 def linearSearch(list, element):
@@ -71,10 +71,11 @@ while loop:
 
   if selection=="1":
     linearword=input("Please enter a word: ")
+    start_lin1=time.time()
     linearSearch(dictionary, linearword)
     print("Linear search is starting...")
     if linearSearch(dictionary, linearword) != -1:
-      print(linearword, "is in the dictionary at position ", linearSearch(dictionary, linearword),".")
+      print(linearword, "is in the dictionary at position ", linearSearch(dictionary, linearword),".", "(", time.time()-start_lin1, "seconds", ")")
     else:
       print(linearword, "is not in the dictionary.")
   elif selection=="2":
@@ -88,7 +89,14 @@ while loop:
   elif selection=="3":
     linCount=0
     for i in range(len(aliceWords)):
-      linearSearch(aliceWords, dictionary[i])
-      if linearSearch(aliceWords, dictionary[i]) == -1:
+      linearSearch(dictionary, aliceWords[i])
+      if linearSearch(dictionary, aliceWords[i]) == -1:
         linCount += 1
         print(linCount)
+  elif selection=="4":
+    binCount=0
+    for i in range(len(aliceWords)):
+      binarySearch(dictionary, aliceWords[i])
+      if binarySearch(dictionary, aliceWords[i]) == -1:
+        binCount += 1
+    print(binCount)
