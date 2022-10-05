@@ -106,3 +106,4 @@ while loop:
       if binarySearch(dictionary, aliceWords[i]) == -1:
         binCount += 1
     print("Number of words not found in dictionary: "+str(binCount),"("+str(time.time()-start_bin2), "seconds"+")")
+
