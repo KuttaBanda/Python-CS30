@@ -75,29 +75,34 @@ while loop:
     linearSearch(dictionary, linearword)
     print("Linear search is starting...")
     if linearSearch(dictionary, linearword) != -1:
-      print(linearword, "is in the dictionary at position ", linearSearch(dictionary, linearword),".", "(", time.time()-start_lin1, "seconds", ")")
+      print(linearword, "is in the dictionary at position",str(linearSearch(dictionary, linearword))+"."+"("+ str(time.time()-start_lin1), "seconds"+ ")")
     else:
       print(linearword, "is not in the dictionary.")
+  
   elif selection=="2":
     binaryword=input("Please enter a word: ")
     start_bin1=time.time()
     binarySearch(dictionary, binaryword)
     print("Binary search is starting...")
     if binarySearch(dictionary, binaryword) != -1:
-      print(binaryword, "is in the dictionary at position ", binarySearch(dictionary, binaryword),".", "(", time.time()-start_bin1, "seconds", ")")
+      print(binaryword, "is in the dictionary at position",str(binarySearch(dictionary, binaryword))+"."+"("+ str(time.time()-start_bin1), "seconds"+ ")")
     else:
       print(binaryword, "is not in the dictionary.")  
+  
   elif selection=="3":
     linCount=0
+    start_lin2=time.time()
     for i in range(len(aliceWords)):
       linearSearch(dictionary, aliceWords[i])
       if linearSearch(dictionary, aliceWords[i]) == -1:
         linCount += 1
-        print(linCount)
+    print("Number of words not found in dictionary: "+str(linCount),"("+str(time.time()-start_lin2), "seconds"+")")
+  
   elif selection=="4":
     binCount=0
+    start_bin2=time.time()
     for i in range(len(aliceWords)):
       binarySearch(dictionary, aliceWords[i])
       if binarySearch(dictionary, aliceWords[i]) == -1:
         binCount += 1
-    print(binCount)
+    print("Number of words not found in dictionary: "+str(binCount),"("+str(time.time()-start_bin2), "seconds"+")")
