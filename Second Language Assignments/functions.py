@@ -1,9 +1,9 @@
-from cgi import test
 from operator import index
+
+from numpy import append
 
 
 test=[1, 2, 3, 4, 5, 6, 7, 8, 9]
-reverselist=[]
 
 def contains(aList, item):
     for elem in aList:
@@ -17,21 +17,22 @@ def indexOf(list, element):
         if list[i]==element:
             return i
     return -1
-print(indexOf(test, 4))
 
 def reverse(aList):
-    for item in aList[::-1]:
-        reverselist.append(item)
-    return reverselist
-print(reverse(test))
+    reverseList=[]
+    for i in range(len(aList)-1, -1, -1):
+        #have to do len(aList)-1 because start is inclusive and -1 for end as end is exclusive
+        reverseList.append(aList[i])
+    return reverseList
+        
+
 
 def swap(aList, index1, index2):
     item1swap=aList[index1]
-    item2swap=aList[index2]
-    aList[index1]=item2swap
+    aList[index1]=aList[index2]
     aList[index2]=item1swap
-    print(aList)
-swap(test, 0, 3)
+
+
 
 def indexOfMin(aList):
     current=aList[0]
@@ -41,4 +42,11 @@ def indexOfMin(aList):
             indexmin=i
             current=aList[i]
     return indexmin
+
+
+print(contains(test,10))
+print(indexOf(test,4))
+print(reverse(test))
+swap(test, 0, 3)
+print(test)
 print(indexOfMin(test))
