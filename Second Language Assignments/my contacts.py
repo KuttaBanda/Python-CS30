@@ -10,7 +10,7 @@ email=["bestdribbles@hotmail.com", "theking@yahoo.com", "sloveniandude@gmail.com
 contacts=([names, phone, email])
 
 loop = True
-while loop:
+while loop: 
     print("")
     print("Main Menu")
     print("1. Display Contact Names")
