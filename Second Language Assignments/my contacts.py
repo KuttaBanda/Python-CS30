@@ -1,7 +1,4 @@
-
-
 import pip
-import random
 
 names=["Kyrie", "LeBron", "Luka"]
 phone=["578-389-2891", "389-289-2783", "366-287-2378"]
