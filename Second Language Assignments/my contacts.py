@@ -17,7 +17,7 @@ while loop:
     print("5. Remove Contact")
     print("6. Exit")
     selection = input("What Option? (1-6): ")
-
+ 
     if selection=="1":
         print("DISPLAY CONTACT NAMES")
         for elem in names:
