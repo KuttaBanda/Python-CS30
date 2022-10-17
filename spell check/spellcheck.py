@@ -12,6 +12,7 @@ def linearSearch(list, element):
         if list[i]==element:
             return i
     return -1
+
 def binarySearch(list, element):
     low=0
     high=len(list)-1
@@ -27,8 +28,6 @@ def binarySearch(list, element):
             low=mid+1
     return -1
 
-
-
 def main():
     # Load data files into lists
     global dictionary
@@ -42,7 +41,6 @@ def main():
     print(dictionary[0:50])
     print(aliceWords[0:50])
 # end main()
-
 
 def loadWordsFromFile(fileName):
     # Read file as a string
@@ -73,25 +71,28 @@ while loop:
     linearword=input("Please enter a word: ")
     start_lin1=time.time()
     linearSearch(dictionary, linearword)
+    print("")
     print("Linear search is starting...")
     if linearSearch(dictionary, linearword) != -1:
-      print(linearword, "is in the dictionary at position",str(linearSearch(dictionary, linearword))+"."+"("+ str(time.time()-start_lin1), "seconds"+ ")")
+      print(linearword, "is IN the dictionary at position",str(linearSearch(dictionary, linearword))+"."+"("+ str(time.time()-start_lin1), "seconds"+ ")")
     else:
-      print(linearword, "is not in the dictionary.")
+      print(linearword, "is NOT IN the dictionary.")
   
   elif selection=="2":
     binaryword=input("Please enter a word: ")
     start_bin1=time.time()
     binarySearch(dictionary, binaryword)
+    print("")
     print("Binary search is starting...")
     if binarySearch(dictionary, binaryword) != -1:
-      print(binaryword, "is in the dictionary at position",str(binarySearch(dictionary, binaryword))+"."+"("+ str(time.time()-start_bin1), "seconds"+ ")")
+      print(binaryword, "is IN the dictionary at position",str(binarySearch(dictionary, binaryword))+"."+"("+ str(time.time()-start_bin1), "seconds"+ ")")
     else:
-      print(binaryword, "is not in the dictionary.")  
+      print(binaryword, "is NOT IN the dictionary.")  
   
   elif selection=="3":
     linCount=0
     start_lin2=time.time()
+    print("")
     print("Linear search is starting...")
     for i in range(len(aliceWords)):
       linearSearch(dictionary, aliceWords[i])
@@ -102,6 +103,7 @@ while loop:
   elif selection=="4":
     binCount=0
     start_bin2=time.time()
+    print("")
     print("Binary search is starting...")
     for i in range(len(aliceWords)):
       binarySearch(dictionary, aliceWords[i])
