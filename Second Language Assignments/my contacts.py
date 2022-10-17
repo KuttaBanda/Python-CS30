@@ -1,10 +1,9 @@
 import pip
 
-names=["Kyrie", "LeBron", "Luka"]
-phone=["578-389-2891", "389-289-2783", "366-287-2378"]
-email=["bestdribbles@hotmail.com", "theking@yahoo.com", "sloveniandude@gmail.com"]
-
-contacts=([names, phone, email])
+#used a 2D array
+contacts=(["Kyrie", "LeBron", "Luka"],
+["578-389-2891", "389-289-2783", "366-287-2378"],
+["bestdribbles@hotmail.com", "theking@yahoo.com", "sloveniandude@gmail.com"])
 
 loop = True
 while loop: 
@@ -20,7 +19,7 @@ while loop:
  
     if selection=="1":
         print("DISPLAY CONTACT NAMES")
-        for elem in names:
+        for elem in contacts[0]:
             print(elem)
 
     elif selection=="2":
@@ -28,7 +27,7 @@ while loop:
         name_search=input("Who's contact name do you want to search?: ")
         for i in contacts[0]:
             if i==name_search:
-                index_name=names.index(name_search)
+                index_name=contacts[0].index(name_search)
                 print("")
                 print(name_search)
                 print(contacts[1] [index_name])
@@ -42,7 +41,7 @@ while loop:
         edit_name=input("Who's contact info do you want to change?: ")
         for name in contacts[0]:
             if name==edit_name:
-                indexof_name=names.index(edit_name)
+                indexof_name=contacts[0].index(edit_name)
                 edited_num=input("What is the new number?: ")
                 contacts[1][indexof_name]=edited_num
                 edited_email=input("What is the new email?: ")
@@ -65,7 +64,7 @@ while loop:
         remove_name=input("Who do you want to remove from contact list?: ")
         for i in contacts[0]:
             if i==remove_name:
-                remove_index=names.index(remove_name)
+                remove_index=contacts[0].index(remove_name)
                 contacts[0].pop(remove_index)
                 contacts[1].pop(remove_index)
                 contacts[2].pop(remove_index)
