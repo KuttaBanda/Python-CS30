@@ -1,8 +1,3 @@
-
-
-from numpy import array
-
-
 def bubbleSort(anArray):  
     for i in range(0,len(anArray)-1):  
         for j in range(len(anArray)-1):  
@@ -11,7 +6,6 @@ def bubbleSort(anArray):
                 anArray[j] = anArray[j+1]  
                 anArray[j+1] = temp  
     return anArray  
-
 
 def selectionSort(anArray):
     for i in range(len(anArray)-1):
@@ -32,8 +26,5 @@ def insertionSort(anArray):
         anArray[j+1]=temp
     return anArray
 
-nums = [10, 70, 30, 100, 40, 45, 90, 80, 85]
-words = ["dog","at", "good", "eye", "cat", "ball", "fish"]
- 
-print(insertionSort(nums))
-print(insertionSort(words))
+
+
