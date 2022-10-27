@@ -27,4 +27,21 @@ evens=[]
 for i in range(100, 9, -2):
     evens.append(i)
 
-print(evens)
+colors_str = "red,orange,yellow,green,blue,indigo,violet"
+colors=colors_str.split(",")
+
+cities_str = "Edmonton;Calgary;Vancouver;Saskatoon;Winnipeg"
+cities=cities_str.split(";")
+
+
+name=[]
+loop = True
+while loop:
+    print("")
+    selection=input("Enter Name(write 'done' if want to end input): ")
+
+    if selection!="done":
+        name.append(selection)
+    elif selection=="done":
+        loop=False
+        print(name)
