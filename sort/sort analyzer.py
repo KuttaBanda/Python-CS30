@@ -59,4 +59,15 @@ def insertionSort(anArray):
 # bubbleSort(nearly)
 # print(time.time()-start)
 #------------------------------------------------------------------
+# fewunique=[]
+# for i in range(1, 5001):
+#     fewunique.append(i)
 
+# for i in range(50):
+#     rand1=random.randint(-10000, 10000)
+#     randind=random.randint(0,4999)
+#     fewunique[randind]=rand1
+    
+# start=time.time()
+# insertionSort(fewunique)
+# print(time.time()-start)
