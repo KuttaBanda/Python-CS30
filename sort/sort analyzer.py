@@ -46,18 +46,18 @@ def insertionSort(anArray):
 # insertionSort(reversedArr)
 # print(time.time()-start)
 #---------------------------------------------------
-# nearly=[]
-# for i in range(1, 10001):
-#     nearly.append(i)
+nearly=[]
+for i in range(1, 10001):
+    nearly.append(i)
 
-# for i in range(5):
-#     rand1=random.randint(0,9999)
-#     rand2=random.randint(0,9999)
-#     nearly[rand1], nearly[rand2]=nearly[rand2], nearly[rand1]
+for i in range(5):
+    rand1=random.randint(0,9999)
+    rand2=random.randint(0,9999)
+    nearly[rand1], nearly[rand2]=nearly[rand2], nearly[rand1]
 
-# start=time.time()
-# bubbleSort(nearly)
-# print(time.time()-start)
+start=time.time()
+selectionSort(nearly)
+print(time.time()-start)
 #------------------------------------------------------------------
 # fewunique=[]
 # for i in range(1, 5001):
@@ -69,5 +69,5 @@ def insertionSort(anArray):
 #     fewunique[randind]=rand1
     
 # start=time.time()
-# insertionSort(fewunique)
+# selectionSort(fewunique)
 # print(time.time()-start)
