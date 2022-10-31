@@ -29,14 +29,15 @@ def insertionSort(anArray):
         anArray[j+1]=temp
     return anArray
 
+
 #randomArray=[]
 #for i in range(10000):
 #    randnum=random.randint(1,10000)
 #    randomArray.append(randnum)
 
-#startins=time.time()
+#start=time.time()
 #bubbleSort(randomArray)
-#print(time.time()-startins)
+#print(time.time()-start)
 #--------------------------------------------------
 # reversedArr=[]
 # for i in range(10000, 0, -1):
