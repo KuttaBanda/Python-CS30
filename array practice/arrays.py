@@ -13,7 +13,7 @@ randomfloat=[]
 for i in range(5000):
     randdec=round(random.uniform(0.0,99.9),1)
     randomfloat.append(randdec)
-print(len(randomfloat))
+
 
 randomdecimal=[]
 for i in range(300):
