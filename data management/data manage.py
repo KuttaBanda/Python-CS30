@@ -36,5 +36,14 @@ while loop:
             print("")
     elif selection=="2":
         properties=input("Which property do you want displayed?: ")
+        properties2=input("Do you wish to have another criteria? (if not, type 'No'): ")
         for i in range(len(songs)):
-            print(songs[i][properties])
+            if properties2!="No":
+                print(songs[i][properties])
+                print(songs[i][properties2])
+                print("")
+            else:
+                print(songs[i][properties])
+                print("")
+    elif selection=="3":
+        properties=input
