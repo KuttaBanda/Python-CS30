@@ -46,4 +46,5 @@ while loop:
                 print(songs[i][properties])
                 print("")
     elif selection=="3":
-        properties=input
+        propertysort=input("What property do you want to sort by?: ")
+        print(sorted(songs, key=lambda i: i[propertysort]))
