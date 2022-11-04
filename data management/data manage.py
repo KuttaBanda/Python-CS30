@@ -1,6 +1,3 @@
-from turtle import title
-
-
 songs=[
     {
         "title": 'Majhail',
@@ -19,6 +16,7 @@ songs=[
     }
 ]
 
+favs=[]
 
 loop=True
 while loop:
@@ -26,25 +24,31 @@ while loop:
     print("Main Menu")
     print("1. Display all Data")
     print("2. Display data based on criteria")
+    print("3. Sort by a property")
     selection=input("What option?: ")
 
     if selection=="1":
         for i in range(len(songs)):
+            print("")
             print(songs[i]["title"])
             print(songs[i]["artist"])
             print(songs[i]["genre"])
-            print("")
     elif selection=="2":
         properties=input("Which property do you want displayed?: ")
         properties2=input("Do you wish to have another criteria? (if not, type 'No'): ")
         for i in range(len(songs)):
             if properties2!="No":
+                print("")
                 print(songs[i][properties])
                 print(songs[i][properties2])
-                print("")
             else:
-                print(songs[i][properties])
                 print("")
+                print(songs[i][properties])
     elif selection=="3":
         propertysort=input("What property do you want to sort by?: ")
-        print(sorted(songs, key=lambda i: i[propertysort]))
+        sortarr=sorted(songs, key=lambda i: i[propertysort])
+        for i in range(len(songs)):
+            print("")
+            print(sortarr[i]["title"])
+            print(sortarr[i]["artist"])
+            print(sortarr[i]["genre"])
