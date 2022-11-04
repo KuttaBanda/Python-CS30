@@ -13,6 +13,11 @@ songs=[
         "title": 'Heyy',
         "artist": 'Lil Baby',
         "genre": "Rap"
+    },
+    {
+        "title": 'Doja',
+        "artist": 'Central Cee',
+        "genre": 'British Drill'
     }
 ]
 
@@ -52,3 +57,5 @@ while loop:
             print(sortarr[i]["title"])
             print(sortarr[i]["artist"])
             print(sortarr[i]["genre"])
+    elif selection=="3":
+        favsong=input("Which song do you want to add to your favorites list?: ")

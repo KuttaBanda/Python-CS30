@@ -60,15 +60,15 @@ def insertionSort(anArray):
 # selectionSort(nearly)
 # print(time.time()-start)
 #------------------------------------------------------------------
-# fewunique=[]
-# for i in range(1, 5001):
-#     fewunique.append(i)
+fewunique=[]
+for i in range(1, 5001):
+    fewunique.append(i)
 
-# for i in range(50):
-#     rand1=random.randint(-10000, 10000)
-#     randind=random.randint(0,4999)
-#     fewunique[randind]=rand1
+for i in range(50):
+    rand1=random.randint(-10000, 10000)
+    randind=random.randint(0,4999)
+    fewunique[randind]=rand1
     
-# start=time.time()
-# selectionSort(fewunique)
-# print(time.time()-start)
+start=time.time()
+selectionSort(fewunique)
+print(time.time()-start)
