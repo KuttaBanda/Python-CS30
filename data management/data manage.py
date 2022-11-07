@@ -30,6 +30,7 @@ while loop:
     print("1. Display all Data")
     print("2. Display data based on criteria")
     print("3. Sort by a property")
+    print("4. Add to favourites")
     selection=input("What option?: ")
 
     if selection=="1":
@@ -57,5 +58,5 @@ while loop:
             print(sortarr[i]["title"])
             print(sortarr[i]["artist"])
             print(sortarr[i]["genre"])
-    elif selection=="3":
+    elif selection=="4":
         favsong=input("Which song do you want to add to your favorites list?: ")
