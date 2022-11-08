@@ -18,6 +18,11 @@ songs=[
         "title": 'Doja',
         "artist": 'Central Cee',
         "genre": 'British Drill'
+    },
+    {
+        "title": "Vaar",
+        "artist": "Sidhu Moosewala",
+        "genre": "Folk"
     }
 ]
 
@@ -27,10 +32,13 @@ loop=True
 while loop:
     print("")
     print("Main Menu")
-    print("1. Display all Data")
+    print("1. Display all data")
     print("2. Display data based on criteria")
     print("3. Sort by a property")
     print("4. Add to favourites")
+    print("5. Remove from favourites")
+    print("6. Display favourites")
+    print("6. Exit")
     selection=input("What option?: ")
 
     if selection=="1":
@@ -60,3 +68,23 @@ while loop:
             print(sortarr[i]["genre"])
     elif selection=="4":
         favsong=input("Which song do you want to add to your favorites list?: ")
+        for i in songs:
+            if i['title']==favsong:
+                favs.append(i)
+    elif selection=="5":
+        removesong=input("What song do you want to remove from the favourites?: ")
+        for i in favs:
+            if i['title']==removesong:
+                favs.remove(i)
+    elif selection=="6":
+        if len(favs)==0:
+            print("No songs in favourites list")
+        else:
+            for i in range(len(favs)):
+                print("")
+                print(favs[i]['title'])
+                print(favs[i]['artist'])
+                print(favs[i]['genre'])
+    elif selection=="7":
+        loop=False
+        print("EXITED")
