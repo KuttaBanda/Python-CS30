@@ -40,7 +40,7 @@ while loop:
     print("4. Add to favourites")
     print("5. Remove from favourites")
     print("6. Display favourites")
-    print("6. Exit")
+    print("7. Exit")
     selection=input("What option?: ")
 
     if selection=="1":
