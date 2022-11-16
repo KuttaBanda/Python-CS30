@@ -1,5 +1,4 @@
 import json
-
 songs=[
     {
         "title": 'Majhail',
@@ -79,6 +78,8 @@ while loop:
             if i['title']==removesong:
                 favs.remove(i)
     elif selection=="6":
+        f = open('F:\Python-CS30\data management\mydata.json')
+        favs=json.load(f)
         if len(favs)==0:
             print("No songs in favourites list")
         else:
@@ -87,6 +88,14 @@ while loop:
                 print(favs[i]['title'])
                 print(favs[i]['artist'])
                 print(favs[i]['genre'])
+        f.close()              
     elif selection=="7":
         loop=False
         print("EXITED")
+    
+    #After every time the menu shows up, dump the list to stay up to date
+    with open('F:\Python-CS30\data management\mydata.json', 'w') as f:
+        json.dump(favs, f)
+
+    
+    
