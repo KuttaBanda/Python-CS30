@@ -1,4 +1,57 @@
 import json
+loop=False
+
+#Login System
+users=[]
+def newUser(username, password):
+    return{
+        "username": username,
+        "password": password,
+        "favs": []
+    }
+
+loopSignIn=True
+while loopSignIn:
+    print("")
+    print("1. Register")
+    print("2. Sign-in")
+    print("3. Delete Account")
+    selectionUser=input("What option?: ")
+
+    if selectionUser=="1":
+        print("")
+        userName=input("Username: ")
+        password=input("Password: ")
+        users.append(newUser(userName,password)) 
+        with open('F:\Python-CS30\data management\mydata.json', 'w') as file:
+            json.dump(users, file)
+    elif selectionUser=="2":
+        file = open('F:\Python-CS30\data management\mydata.json')
+        users=json.load(file)
+        print("")
+        userNameLog=input("Username: ")
+        passwordLog=input("Password: ")
+        for i in range(len(users)):
+            if users[i]["username"]==userNameLog and users[i]["password"]==passwordLog:
+                print("Login Successful")
+                loggedIn=i
+                loopSignIn=False
+                loop=True
+    elif selectionUser=="3":
+        file = open('F:\Python-CS30\data management\mydata.json')
+        users=json.load(file)
+        userNameDel=input("Username: ")
+        passwordDel=input("Password: ")
+        for i in range(len(users)):
+            if users[i]["username"]==userNameDel and users[i]["password"]==passwordDel:
+                del users[i]
+        with open('F:\Python-CS30\data management\mydata.json', 'w') as file:
+            json.dump(users, file)
+
+                
+
+        
+
 songs=[
     {
         "title": 'Majhail',
@@ -27,9 +80,8 @@ songs=[
     }
 ]
 
-favs=[]
 
-loop=True
+
 while loop:
     print("")
     print("Main Menu")
@@ -69,14 +121,14 @@ while loop:
             print(sortarr[i]["genre"])
     elif selection=="4":
         favsong=input("Which song do you want to add to your favorites list?: ")
-        for i in songs:
-            if i['title']==favsong:
-                favs.append(i)
+        for song in songs:
+            if song['title']==favsong:
+                users[loggedIn]["favs"].append(song)
     elif selection=="5":
         removesong=input("What song do you want to remove from the favourites?: ")
-        for i in favs:
-            if i['title']==removesong:
-                favs.remove(i)
+        for song in users[loggedIn]["favs"]:
+            if song['title']==removesong:
+                del song
     elif selection=="6":
         f = open('F:\Python-CS30\data management\mydata.json')
         favs=json.load(f)
@@ -94,8 +146,7 @@ while loop:
         print("EXITED")
     
     #After every time the menu shows up, dump the list to stay up to date
-    with open('F:\Python-CS30\data management\mydata.json', 'w') as f:
-        json.dump(favs, f)
-
+    with open('F:\Python-CS30\data management\mydata.json', 'w') as file:
+        json.dump(users, file)
     
     
