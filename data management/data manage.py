@@ -127,19 +127,21 @@ while loop:
     elif selection=="5":
         removesong=input("What song do you want to remove from the favourites?: ")
         for song in users[loggedIn]["favs"]:
-            if song['title']==removesong:
-                del song
+            if song["title"]==removesong:
+                i=list(users[loggedIn]["favs"]).index(song)
+                del users[loggedIn]['favs'][i]
+                print(song['title']+" removed from favourites")
     elif selection=="6":
         f = open('F:\Python-CS30\data management\mydata.json')
         favs=json.load(f)
         if len(favs)==0:
             print("No songs in favourites list")
         else:
-            for i in range(len(favs)):
+            for i in range(len(users[loggedIn]["favs"])):
                 print("")
-                print(favs[i]['title'])
-                print(favs[i]['artist'])
-                print(favs[i]['genre'])
+                print(users[loggedIn]["favs"][i]['title'])
+                print(users[loggedIn]["favs"][i]['artist'])
+                print(users[loggedIn]["favs"][i]['genre'])
         f.close()              
     elif selection=="7":
         loop=False
