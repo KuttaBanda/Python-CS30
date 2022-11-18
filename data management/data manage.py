@@ -124,6 +124,7 @@ while loop:
         for song in songs:
             if song['title']==favsong:
                 users[loggedIn]["favs"].append(song)
+                print(song['title']+" added to favourites")
     elif selection=="5":
         removesong=input("What song do you want to remove from the favourites?: ")
         for song in users[loggedIn]["favs"]:
