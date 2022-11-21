@@ -15,7 +15,6 @@ while loopSignIn:
     print("")
     print("1. Register")
     print("2. Sign-in")
-    print("3. Delete Account")
     selectionUser=input("What option?: ")
 
     if selectionUser=="1":
@@ -37,21 +36,12 @@ while loopSignIn:
                 loggedIn=i
                 loopSignIn=False
                 loop=True
-    elif selectionUser=="3":
-        file = open('F:\Python-CS30\data management\mydata.json')
-        users=json.load(file)
-        userNameDel=input("Username: ")
-        passwordDel=input("Password: ")
-        for i in range(len(users)):
-            if users[i]["username"]==userNameDel and users[i]["password"]==passwordDel:
-                del users[i]
-        with open('F:\Python-CS30\data management\mydata.json', 'w') as file:
-            json.dump(users, file)
+
 
                 
 
-        
-
+ 
+#SONGS
 songs=[
     {
         "title": 'Majhail',
