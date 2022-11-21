@@ -67,6 +67,11 @@ songs=[
         "title": "Vaar",
         "artist": "Sidhu Moosewala",
         "genre": "Folk"
+    },
+    {
+        "title": "Her Loss",
+        "artist": "Drake & 21 Savage",
+        "genre": "Rap"
     }
 ]
 
