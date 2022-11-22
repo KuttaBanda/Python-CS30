@@ -22,6 +22,7 @@ while loopSignIn:
         userName=input("Username: ")
         password=input("Password: ")
         users.append(newUser(userName,password)) 
+        print("Registered!")
         with open('F:\Python-CS30\data management\mydata.json', 'w') as file:
             json.dump(users, file)
     elif selectionUser=="2":
@@ -32,10 +33,12 @@ while loopSignIn:
         passwordLog=input("Password: ")
         for i in range(len(users)):
             if users[i]["username"]==userNameLog and users[i]["password"]==passwordLog:
-                print("Login Successful")
+                print("Login Successful!")
                 loggedIn=i
                 loopSignIn=False
                 loop=True
+        else:
+            print("Login Unsuccesful :(")
 
 
                 
