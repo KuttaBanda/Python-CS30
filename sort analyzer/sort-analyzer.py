@@ -58,7 +58,7 @@ fewUniqueData = loadDataArray("analyzerdata-files/few-unique-values.txt")
 
 
 # EXAMPLE OF HOW TO TIME DURATION OF A SORT ALGORITHM
-startTime = time.time()
-selectionSort(fewUniqueData)
-endTime = time.time()
-print(f"Bubble Sort Random Data: {endTime - startTime} seconds")
+# startTime = time.time()
+# selectionSort(fewUniqueData)
+# endTime = time.time()
+# print(f"Bubble Sort Random Data: {endTime - startTime} seconds")
