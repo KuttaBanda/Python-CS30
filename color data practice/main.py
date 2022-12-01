@@ -46,7 +46,7 @@ while loop:
         letter=input("What letter do you want to search up by?: ")
         countLet=0
         for color in color_data:
-            if color["name"][0]==letter
+            if color["name"][0]==letter:
                     countLet+=1
                     print(color["name"])
         print(countLet)
