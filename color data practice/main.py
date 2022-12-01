@@ -31,9 +31,7 @@ while loop:
     elif selection=="3":
         countPorR=0
         for color in color_data:
-            if color["family"]=="Red":
-                countPorR+=1
-            elif color["family"]=="Pink":
+            if color["family"]=="Red" or color['family']=="Pink":
                 countPorR+=1
         print(countPorR)
     elif selection=="4":
@@ -48,8 +46,7 @@ while loop:
         letter=input("What letter do you want to search up by?: ")
         countLet=0
         for color in color_data:
-            for letters in color["name"].split():
-                if letters[0]==letter:
+            if color["name"][0]==letter
                     countLet+=1
                     print(color["name"])
         print(countLet)
