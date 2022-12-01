@@ -33,7 +33,7 @@ while loop:
         for color in color_data:
             if color["family"]=="Red":
                 countPorR+=1
-            if color["family"]=="Pink":
+            elif color["family"]=="Pink":
                 countPorR+=1
         print(countPorR)
     elif selection=="4":
