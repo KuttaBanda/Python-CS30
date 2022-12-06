@@ -46,7 +46,7 @@ while loopSignIn:
  
 #SONGS
 songs=[
-    {
+    { 
         "title": 'Majhail',
         "artist": 'AP Dhillon',
         "genre": 'Punjabi Rap'
