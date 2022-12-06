@@ -75,6 +75,11 @@ songs=[
         "title": "Her Loss",
         "artist": "Drake & 21 Savage",
         "genre": "Rap"
+    },
+    {
+        "title": "Jatt Life Zone",
+        "artist": "Varinder Brar",
+        "genre": "Punjabi Trap"
     }
 ]
 
