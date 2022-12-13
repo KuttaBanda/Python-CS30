@@ -4,7 +4,7 @@ class Backpack:
         self.size=size
         self.items=[]
         self.open=False
-    
+
     def openBag(self):
         self.open=True
         print("Bag Open")
@@ -12,7 +12,22 @@ class Backpack:
     def closeBag(self):
         self.open=False
         print("Bag Closed")
-        
-    def setLevel(self, newLevel):
-        self.level=newLevel
-        print(self.level)   
+
+    def putin(self, item):
+        self.items.append(item)
+        print(item + "in bag")
+
+    def takeout(self, item):
+        for object in self.items:
+            if object==item:
+                self.items.remove(object)
+        print(item+"taken out")
+
+
+
+smallBlue=Backpack("blue", "small")
+mediumRed=Backpack("red", "medium")
+largeGreen=Backpack("green", "large")
+
+    
+    
