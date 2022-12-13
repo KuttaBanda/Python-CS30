@@ -1,16 +1,18 @@
-class Characters:
-    def __init__(self, name, phrase1, phrase2):
-        self.name=name
-        self.phrase1=phrase1
-        self.phrase2=phrase2
-        self.level=0
+class Backpack:
+    def __init__(self, color, size):
+        self.color=color
+        self.size=size
+        self.items=[]
+        self.open=False
     
-    def speak(self, phraseNum):
-        if phraseNum==1:
-            print(self.phrase1)
-        elif phraseNum==2:
-            print(self.phrase2)
-
+    def openBag(self):
+        self.open=True
+        print("Bag Open")
+    
+    def closeBag(self):
+        self.open=False
+        print("Bag Closed")
+        
     def setLevel(self, newLevel):
         self.level=newLevel
         print(self.level)   
