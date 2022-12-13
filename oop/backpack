@@ -15,13 +15,13 @@ class Backpack:
 
     def putin(self, item):
         self.items.append(item)
-        print(item + "in bag")
+        print(item + " in bag")
 
     def takeout(self, item):
         for object in self.items:
             if object==item:
                 self.items.remove(object)
-        print(item+"taken out")
+        print(item+" taken out")
 
 
 
@@ -29,5 +29,12 @@ smallBlue=Backpack("blue", "small")
 mediumRed=Backpack("red", "medium")
 largeGreen=Backpack("green", "large")
 
-    
+smallBlue.openBag()
+smallBlue.putin("lunch")
+smallBlue.putin("jacket")
+smallBlue.closeBag()
+smallBlue.openBag()
+smallBlue.takeout("jacket")
+smallBlue.closeBag()    
+
     
