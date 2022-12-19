@@ -62,6 +62,4 @@ while packingloop:
     if itemAdd=="done":
         packingloop=False
         print("Going to school...At school")
-
-
-    
+        
