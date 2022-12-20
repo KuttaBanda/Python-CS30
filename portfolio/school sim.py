@@ -79,7 +79,7 @@ for currentClass in todaySchedule:
         bag.openBag()
         bag.takeout(removeItem)
         print("Class Begins...Class proceeding...")
-        if  randQuiz==7:
+        if  randQuiz==10:
             print("SURPRISE! You have a district wide diagnostic test. Mandatory for all students")
             mathQ=input("What is ", mathQ1,"x", mathQ2," ?: ")
             if mathQ==str(mathQ1*mathQ2):
