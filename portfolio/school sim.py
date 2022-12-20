@@ -46,8 +46,12 @@ for i in range(7):
     randomClass=(random.randint(0,6))
     if i!=3:
         print(possibleClasses[randomClass])
+        todaySchedule.append(possibleClasses[randomClass])
     else: 
         print("Lunch Time!")
+        todaySchedule.append("Lunch")
+
+print(todaySchedule)
 
 print("")
 print("Pack your bag!")
@@ -61,5 +65,48 @@ while packingloop:
     bag.putin(itemAdd)
     if itemAdd=="done":
         packingloop=False
+        bag.closeBag()
         print("Going to school...At school")
         
+
+for currentClass in todaySchedule:
+    randQuiz=random.randint(0,10)
+    mathQ1=random.randint(0,12)
+    mathQ2=random.randint(0,12)
+    if currentClass!="Lunch":
+        print("")
+        print("You now have "+ currentClass)
+        removeItem=input("Take out the item needed for this class: ")
+        bag.openBag()
+        bag.takeout(removeItem)
+        print("Class Begins...Class proceeding...")
+        if  randQuiz==7:
+            print("SURPRISE! You have a district wide diagnostic test. Mandatory for all students")
+            mathQ=input("What is ", mathQ1+"x", mathQ2+" ?: ")
+            if mathQ==str(mathQ1*mathQ2):
+                print("Correct!")
+            else:
+                print("Incorrect.")
+            socialQ=input("What year was Canada officially a country?: ")
+            if socialQ=="1867":
+                print("Correct1")
+            else:
+                print("Incorrect.")
+            englishQ=input("What is this called?(,): ")
+            if englishQ=="comma":
+                print("Correct!")
+            else:
+                print("Incorrect.")
+            scienceQ=input("What gas do plants produce?: ")
+            if scienceQ=="CO2" or scienceQ=="carbon dioxide":
+                print("Correct!")
+            else:
+                print("Incorrect.")
+            print("Thank you for partaking in the this test")
+            print("Class has ended. Pack your bags")
+        else:
+            print("Class has ended. Pack your bags")
+        print("Packing bag...")
+        bag.putin(removeItem)
+        bag.closeBag
+        print("Bag has been packed. Go to your next class")
