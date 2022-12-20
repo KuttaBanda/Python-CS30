@@ -58,9 +58,10 @@ print("Add items you need for all your classes.(Lunch has already been packed) W
 bag.putin("Lunch Bag")
 packingloop = True
 while packingloop:
-    print("")
-    itemAdd=input("What item do you want to add?: ")
-    bag.putin(itemAdd)
+    if itemAdd!="done":
+        print("")
+        itemAdd=input("What item do you want to add?: ")
+        bag.putin(itemAdd)
     if itemAdd=="done":
         packingloop=False
         bag.closeBag()
