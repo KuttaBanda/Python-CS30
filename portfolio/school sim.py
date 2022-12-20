@@ -55,14 +55,14 @@ print("")
 print("Pack your bag!")
 bag.openBag()
 print("Add items you need for all your classes.(Lunch has already been packed) When everything is packed and ready to go to school, type 'done'")
-bag.putin("Lunch Bag")
+bag.putin("Lunch Kit")
 packingloop = True
 while packingloop:
+    print("")
+    itemAdd=input("What item do you want to add?: ")
     if itemAdd!="done":
-        print("")
-        itemAdd=input("What item do you want to add?: ")
         bag.putin(itemAdd)
-    if itemAdd=="done":
+    elif itemAdd=="done":
         packingloop=False
         bag.closeBag()
         print("Going to school...At school")
@@ -81,7 +81,7 @@ for currentClass in todaySchedule:
         print("Class Begins...Class proceeding...")
         if  randQuiz==7:
             print("SURPRISE! You have a district wide diagnostic test. Mandatory for all students")
-            mathQ=input("What is ", mathQ1+"x", mathQ2+" ?: ")
+            mathQ=input("What is ", mathQ1,"x", mathQ2," ?: ")
             if mathQ==str(mathQ1*mathQ2):
                 print("Correct!")
             else:
@@ -107,17 +107,18 @@ for currentClass in todaySchedule:
             print("Class has ended. Pack your bags")
         print("Packing bag...")
         bag.putin(removeItem)
-        bag.closeBag
+        bag.closeBag()
         print("Bag has been packed. Go to your next class")
     else:
         print("It is Lunch Time!")
         bag.openBag()
         removeLunch=input("Remove Lunch(Y or N)?: ")
         if removeLunch=="Y":
-            bag.takeout("Lunch Bag")
+            bag.takeout("Lunch Kit")
             print("Socializing...Eating Lunch...Joking around with friends...")
         else:
             print("Don't want lunch? Go take this time to socialize")
         print("Lunch is over. Time for class")
-        bag.putin("Lunch Bag")
+        bag.putin("Lunch Kit")
         bag.closeBag()
+
