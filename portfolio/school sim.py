@@ -51,13 +51,11 @@ for i in range(7):
         print("Lunch Time!")
         todaySchedule.append("Lunch")
 
-print(todaySchedule)
-
 print("")
 print("Pack your bag!")
 bag.openBag()
-print("Add items you need for all your classes. When everything is packed and ready to go to school, type 'done'")
-
+print("Add items you need for all your classes.(Lunch has already been packed) When everything is packed and ready to go to school, type 'done'")
+bag.putin("Lunch Bag")
 packingloop = True
 while packingloop:
     print("")
@@ -110,3 +108,15 @@ for currentClass in todaySchedule:
         bag.putin(removeItem)
         bag.closeBag
         print("Bag has been packed. Go to your next class")
+    else:
+        print("It is Lunch Time!")
+        bag.openBag()
+        removeLunch=input("Remove Lunch(Y or N)?: ")
+        if removeLunch=="Y":
+            bag.takeout("Lunch Bag")
+            print("Socializing...Eating Lunch...Joking around with friends...")
+        else:
+            print("Don't want lunch? Go take this time to socialize")
+        print("Lunch is over. Time for class")
+        bag.putin("Lunch Bag")
+        bag.closeBag()
