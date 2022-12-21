@@ -122,3 +122,5 @@ for currentClass in todaySchedule:
         bag.putin("Lunch Kit")
         bag.closeBag()
 
+print("TRICKED YOU! No more classes for the day! Go home and relax and get ready for another day of school tomorrow.")
+print("Going home...At home")
