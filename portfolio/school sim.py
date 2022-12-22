@@ -69,7 +69,7 @@ while packingloop:
         
 
 for currentClass in todaySchedule:
-    randQuiz=random.randint(0,10)
+    randQuiz=random.randint(10,10)
     mathQ1=random.randint(0,12)
     mathQ2=random.randint(0,12)
     if currentClass!="Lunch":
@@ -81,7 +81,7 @@ for currentClass in todaySchedule:
         print("Class Begins...Class proceeding...")
         if  randQuiz==10:
             print("SURPRISE! You have a district wide diagnostic test. Mandatory for all students")
-            mathQ=input("What is ", mathQ1,"x", mathQ2," ?: ")
+            mathQ=input("What is ", str(mathQ1),"x", str(mathQ2)," ?: ")
             if mathQ==str(mathQ1*mathQ2):
                 print("Correct!")
             else:
@@ -124,3 +124,16 @@ for currentClass in todaySchedule:
 
 print("TRICKED YOU! No more classes for the day! Go home and relax and get ready for another day of school tomorrow.")
 print("Going home...At home")
+print("Take out all your supplies and put them back where they always are. Your lunch kit was takenout by your mom already.")
+bag.openBag()
+removeloop=True
+while removeloop:
+    removeFinal=input("What item do you want to take out(when done write 'done')")
+    if removeFinal!="done":
+        bag.takeout(removeFinal)
+    else:
+        removeloop=False
+        print("Everything has been taken out. Now you are free from school responsibilities!")
+
+relaxChoice=input("Do you want to spend the rest of your day playing 'video games' or do you want to go to 'sleep' early?")
+print("Have fun and use this time to relieve stress before another stressful day at school tomorrow!")
