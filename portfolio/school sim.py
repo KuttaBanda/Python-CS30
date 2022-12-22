@@ -81,14 +81,14 @@ for currentClass in todaySchedule:
         print("Class Begins...Class proceeding...")
         if  randQuiz==10:
             print("SURPRISE! You have a district wide diagnostic test. Mandatory for all students")
-            mathQ=input("What is ", str(mathQ1),"x", str(mathQ2)," ?: ")
-            if mathQ==str(mathQ1*mathQ2):
+            mathQ=int(input("What is %s x %s?: " % (mathQ1, mathQ2)))
+            if mathQ==mathQ1*mathQ2:
                 print("Correct!")
             else:
                 print("Incorrect.")
             socialQ=input("What year was Canada officially a country?: ")
             if socialQ=="1867":
-                print("Correct1")
+                print("Correct!")
             else:
                 print("Incorrect.")
             englishQ=input("What is this called?(,): ")
