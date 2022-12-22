@@ -69,7 +69,7 @@ while packingloop:
         
 
 for currentClass in todaySchedule:
-    randQuiz=random.randint(10,10)
+    randQuiz=random.randint(0,10)
     mathQ1=random.randint(0,12)
     mathQ2=random.randint(0,12)
     if currentClass!="Lunch":
