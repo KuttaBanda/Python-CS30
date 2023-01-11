@@ -1,6 +1,6 @@
 from random import randint
 
-runCode=False
+
 choices=["rock", "paper","scissors"]
 
 class player:
@@ -8,12 +8,18 @@ class player:
         self.choice="None"
         self.score= 0
 
-    def getInput(self, choice):
+    def getInput(self, choice, run):
         for item in choices:
             if item==choice:
                 print('Item selected')
                 self.choice=choice
-        print("That is not an item in RPS")
+                return run
+        print("Game Ended")
+        run=False
+        return run
+
+    
+
         
 
 
