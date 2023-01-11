@@ -16,9 +16,7 @@ class player:
                 return run
         print("Game Ended")
         run=False
-        return run
-
-    
+        return run    
 
         
 
