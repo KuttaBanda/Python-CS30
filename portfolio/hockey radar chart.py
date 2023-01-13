@@ -9,7 +9,7 @@ connorGoals=[0,2, 31, 34, 38, 26, 47, 21]
 nameInput=input("What is your name?: ")
 
 
-class Graphs:
+class User:
     def __init__(self,name):
         self.name=name
 
@@ -20,5 +20,5 @@ class Graphs:
         plt.legend()
         plt.show()
 
-userName=Graphs(nameInput)
+userName=User(nameInput)
 
