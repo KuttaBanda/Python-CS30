@@ -23,11 +23,9 @@ class User:
         plt.plot(season_in_league,connorGoals, label="Kyle Connor")
         plt.legend()
         plt.show()
-        
+
     def pointsThisSeason(self):
         plt.bar(players, points)
         plt.show()
 
 userName=User(nameInput)
-
-userName.pointsThisSeason()
