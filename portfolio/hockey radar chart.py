@@ -9,7 +9,7 @@ connorGoals=[0,2, 31, 34, 38, 26, 47, 21]
 
 #careerpoints
 players=["Connor McDavid", "Alex Ovechkin", "Auston Matthews", "Leon Draisaitl"]
-points=[79,48,47,]
+points=[79,48,47,63]
 nameInput=input("What is your name?: ")
 
 
@@ -23,6 +23,11 @@ class User:
         plt.plot(season_in_league,connorGoals, label="Kyle Connor")
         plt.legend()
         plt.show()
+        
+    def pointsThisSeason(self):
+        plt.bar(players, points)
+        plt.show()
 
 userName=User(nameInput)
 
+userName.pointsThisSeason()
