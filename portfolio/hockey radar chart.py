@@ -29,3 +29,22 @@ class User:
         plt.show()
 
 userName=User(nameInput)
+
+def mainMenu():
+    print("")
+    print("HELLO", nameInput+"!")
+    print("Welcome to the Python Hockey Stats Catalog main menu!")
+    print("1. Line chart for goals vs seasons in league")
+    print("2. Bar chart comparing current points for players in the 22-23 season")
+    selection=int(input("What option do you choose?: "))
+
+    if selection==1:
+        userName.goalsBySeason()
+    elif selection==2:
+        userName.pointsThisSeason()
+    else:
+        print("Input is not valid")
+    
+    mainMenu()
+
+mainMenu()
