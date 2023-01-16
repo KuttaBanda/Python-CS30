@@ -12,6 +12,9 @@ players=["Connor McDavid", "Alex Ovechkin", "Auston Matthews", "Leon Draisaitl"]
 points=[79,48,47,63]
 nameInput=input("What is your name?: ")
 
+#goalie scatter
+ages=[.921,.905,.912,.897,.896,.883,.918,.906,.913,.896,.895,.968,.915,.903,.897,.895,.894,.893,.919,.918,.892,.907,.904,.904,.885,.883,.908,.905,.902,.875,.936,.926,.912,.894,.893,.891,.917,.917,.908,.895,.868,.867,.927,.919,.918,.918,.918,.914,.902,.883,.883,.880,.880,.915,.910,.907,.902,.900,.898,.895,.888,.870,.923,.914,.913,.907,.889,.925,.924,.914,.910,.905,.924,.913,.907,.906,.894,.894,.919,.909,.906,.886]
+svPercent=[41,38,37,37,37,37,35,35,34,34,34,33,33,33,33,33,33,33,32,32,32,31,31,31,31,31,30,30,30,30,29,29,29,29,29,29,28,28,28,28,28,28,27,27,27,27,27,27,27,27,27,27,27,27,26,26,26,26,26,26,26,26,26,25,25,25,25,25,24,24,24,24,24,23,23,23,23,23,23,22,22,21,20]
 
 class User:
     def __init__(self,name):
@@ -27,6 +30,10 @@ class User:
     def pointsThisSeason(self):
         plt.bar(players, points)
         plt.show()
+    
+    def ageVsSavPercent(self):
+        plt.scatter(ages, svPercent)
+        plt.show()
 
 userName=User(nameInput)
 
@@ -36,12 +43,15 @@ def mainMenu():
     print("Welcome to the Python Hockey Stats Catalog main menu!")
     print("1. Line chart for goals vs seasons in league")
     print("2. Bar chart comparing current points for players in the 22-23 season")
+    print("3. Scatter plot comparing goalie save percentage vs age")
     selection=int(input("What option do you choose?: "))
 
     if selection==1:
         userName.goalsBySeason()
     elif selection==2:
         userName.pointsThisSeason()
+    elif selection==3:
+        userName.ageVsSavPercent()
     else:
         print("Input is not valid")
     
