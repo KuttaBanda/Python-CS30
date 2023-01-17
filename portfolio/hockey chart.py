@@ -35,7 +35,7 @@ class User:
         plt.scatter(ages, svPercent)
         plt.show()
 
-userName=User(nameInput)
+nameOfUser=User(nameInput)
 
 def mainMenu():
     print("")
@@ -48,13 +48,13 @@ def mainMenu():
     selection=int(input("What option do you choose?: "))
 
     if selection==1:
-        userName.goalsBySeason()
+        nameOfUser.goalsBySeason()
         mainMenu()
     elif selection==2:
-        userName.pointsThisSeason()
+        nameOfUser.pointsThisSeason()
         mainMenu()
     elif selection==3:
-        userName.ageVsSavPercent()
+        nameOfUser.ageVsSavPercent()
         mainMenu()
     elif selection==4:
         print("EXITED")
